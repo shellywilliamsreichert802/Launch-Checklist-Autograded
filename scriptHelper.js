@@ -1,6 +1,6 @@
 // Write your helper functions here!
 
-require('cross-fetch/polyfill');
+// require('cross-fetch/polyfill');
 
 //  TASK 3
  /**
@@ -86,10 +86,11 @@ if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     // }
     // });
 
-    // **const pilotValidation = validateInput(pilot);
-    // const copilotValidation = validateInput(copilot);
-    // const fuelLevelValidation = validateInput(fuelLevel);
-    // const cargoMassValidation = validateInput(cargoMass);
+    const pilotValidation = validateInput(pilot);
+    console.log(pilotValidation);
+    const copilotValidation = validateInput(copilot);
+    const fuelLevelValidation = validateInput(fuelLevel);
+    const cargoMassValidation = validateInput(cargoMass);
 //   if (!validateInput(pilot) || !validateInput(copilot) || !validateInput(fuelLevel) || !validateInput(cargoLevel)) {
 //     // If any input is invalid, display an error message to the user.
 //     alert("All fields are required. Please fill in valid information.");
@@ -127,12 +128,12 @@ if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     }
     // Shuttle should be ready for launch, enough fuel and cargo
     if (fuelLevel >= 10000 && cargoMass <= 10000) {
-        document.getElementById("faultyItems").style.visibility = "hidden";
+        document.getElementById("faultyItems").style.visibility.push = "hidden";
         document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch";
         document.getElementById("launchStatus").style.color = 'green';
     } else {
         // At least one condition is not met, so show the faulty items
-        document.getElementById("faultyItems").style.visibility = "visible";
+        document.getElementById("faultyItems").style.visibility.push = "visible";
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.getElementById("launchStatus").style.color = 'red';
       }
