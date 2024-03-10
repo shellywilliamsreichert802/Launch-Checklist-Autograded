@@ -108,9 +108,11 @@ if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     
     document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`;
     document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`;
+    list.style.visibility = "visible"
 
     if (fuelLevel < 10000) {
-        document.getElementById("faultyItems").style.visibility = "visible";
+        // document.getElementById("faultyItems").style.visibility = "visible";
+        // list.style.visibility = "visible"
         document.getElementById("fuelStatus").innerHTML = "Fuel level too low for launch";
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.getElementById("launchStatus").style.color = 'red';
@@ -119,7 +121,7 @@ if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     }
 
     if (cargoMass > 10000) {
-        document.getElementById("faultyItems").style.visibility = "visible";
+        // document.getElementById("faultyItems").style.visibility = "visible";
         document.getElementById("cargoStatus").innerHTML = "Cargo mass too heavy for launch";
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.getElementById("launchStatus").style.color = 'red';
@@ -128,12 +130,13 @@ if (isNaN(fuelLevel) || isNaN(cargoMass)) {
     }
     // Shuttle should be ready for launch, enough fuel and cargo
     if (fuelLevel >= 10000 && cargoMass <= 10000) {
-        document.getElementById("faultyItems").style.visibility.push = "hidden";
+        // document.getElementById("faultyItems").style.visibility = "hidden";
+        list.style.visible = "hiddden";
         document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch";
         document.getElementById("launchStatus").style.color = 'green';
     } else {
         // At least one condition is not met, so show the faulty items
-        document.getElementById("faultyItems").style.visibility.push = "visible";
+        // document.getElementById("faultyItems").style.visibility = "visible";
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch";
         document.getElementById("launchStatus").style.color = 'red';
       }

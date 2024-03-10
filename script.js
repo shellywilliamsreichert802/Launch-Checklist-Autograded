@@ -16,29 +16,33 @@ window.addEventListener('load', () => {
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
         event.preventDefault()
-        let pilotNameInput = document.querySelector("input[name=pilotName]").value;
-        let copilotNameInput = document.querySelector("input[name=copilotName]").value;
-        let fuelLevelInput = parseFloat(document.querySelector("input[name=fuelLevel]").value);
-        let cargoMassInput = parseFloat(document.querySelector("input[name=cargoMass]").value);
+        let pilot = document.querySelector("input[name=pilotName]").value;
+        let copilot  = document.querySelector("input[name=copilotName]").value;
+        let fuelLevel  = parseFloat(document.querySelector("input[name=fuelLevel]").value);
+        let cargoMass = parseFloat(document.querySelector("input[name=cargoMass]").value);
 console.log("form listener triggered");
+        let list =document.getElementById('faultyItems');
+        // let faultyItems = (document.querySelector("input[name=faulyItems]"));
+
         // let faultyItems =
         // let list = parseFloat(document.querySelector("input[name=faultyItems]").value);
-        const faultyItemsElement = document.getElementById("faultyItems");
-        const launchStatusElement = document.getElementById("launchStatus");
-        const parsedFaultyItems = JSON.parse(faultyItemsString);
+        // const faultyItemsElement = document.getElementById("faultyItems");
+        // const launchStatusElement = document.getElementById("launchStatus");
+        // const parsedFaultyItems = JSON.parse(faultyItemsString);
 
-        const faultyListElement = document.querySelector(".faulty-list");
-        faultyListElement.classList.add("visible"); // Show the list
-        faultyListElement.innerHTML = ""; // Clear existing content
-        if (faultyItems.length > 0) {
-            faultyItemsElement.style.visibility = "visible";
-            launchStatusElement.innerHTML = "Shuttle not ready for launch";
-            launchStatusElement.style.color = "red";
-        } else {
-            faultyItemsElement.style.visibility = "hidden";
-            launchStatusElement.innerHTML = "Shuttle is ready for launch";
-            launchStatusElement.style.color = "green";
-        }
+
+        // const faultyItemsElement = document.querySelector(".faulty-list");
+        // faultyListElement.classList.add("visible"); // Show the list
+        // faultyListElement.innerHTML = ""; // Clear existing content
+        // if (faultyItems.length > 0) {
+        //     faultyItemsElement.style.visibility = "visible";
+        //     launchStatusElement.innerHTML = "Shuttle not ready for launch";
+        //     launchStatusElement.style.color = "red";
+        // } else {
+        //     faultyItemsElement.style.visibility = "hidden";
+        //     launchStatusElement.innerHTML = "Shuttle is ready for launch";
+        //     launchStatusElement.style.color = "green";
+        // }
 
 // Populate the list
 // parsedFaultyItems.forEach((item) => {
